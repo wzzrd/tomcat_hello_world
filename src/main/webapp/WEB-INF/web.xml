@@ -23,9 +23,9 @@
   metadata-complete="true">
 
     <description>
-      Tomcat App (Boilerplate)
+      Chat websocket example
     </description>
-    <display-name>Boilerplate code</display-name>
+    <display-name>Chat websocket example</display-name>
 
     <welcome-file-list>
         <welcome-file>index.xhtml</welcome-file>

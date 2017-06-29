@@ -19,11 +19,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.openshift.cloudenablement.eap</groupId>
-    <artifactId>example_app</artifactId>
-    <version>0.0.1</version>
+    <artifactId>websocket-chat</artifactId>
+    <version>1.2.0.Final</version>
     <packaging>war</packaging>
-    <name>Tomcat boilerplate</name>
-    <description>Boilerplate code for a Tomcat App on OpenShift 3</description>
+    <name>Tomcat websocket example</name>
+    <description>A websocket example that can be used with Tomcat 7 and Tomcat 8</description>
 
     <licenses>
         <license>
@@ -36,6 +36,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- version dependencies -->
+        <version.websocket.api>1.1</version.websocket.api>
+        <version.jboss.logging>3.1.4.GA-redhat-2</version.jboss.logging>
+
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -43,6 +47,18 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>${version.websocket.api}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>${version.jboss.logging}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
