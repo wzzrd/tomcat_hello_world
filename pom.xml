@@ -38,11 +38,11 @@
 
         <!-- version dependencies -->
         <version.websocket.api>1.1</version.websocket.api>
-        <version.jboss.logging>3.1.4.GA-redhat-2</version.jboss.logging>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
+        <version.jboss.logging>3.1.4.GA-redhat-2</version.jboss.logging>
     </properties>
 
 
@@ -51,6 +51,12 @@
             <groupId>javax.websocket</groupId>
             <artifactId>javax.websocket-api</artifactId>
             <version>${version.websocket.api}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0.redhat-1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
